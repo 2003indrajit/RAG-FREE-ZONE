@@ -1,53 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RAG-FREE-ZONE || Anti-Ragging Portal</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-</head>
-<body>
-  <nav class="navbar">
-    <div class="content">
-      <div class="logo">
-        <img src="/images/logo.png" alt="">
-      </div>
-      <ul class="menu-list">
-        <div class="icon cancel-btn">
-          <i class="fas fa-times"></i>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="content">
+        <div class="logo">
+          <!-- <img src="/images/logo.png" alt=""> -->
+          <button class="button" data-text="Awesome">
+            <span class="actual-text">&nbsp;rag&nbsp;free&nbsp;zone&nbsp;</span>
+            <span aria-hidden="true" class="hover-text"
+              >&nbsp;rag&nbsp;free&nbsp;zone&nbsp;</span
+            >
+          </button>
         </div>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <div class="icon menu-btn">
-        <i class="fas fa-bars"></i>
+        <ul class="menu-list">
+          <div class="icon cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li class="services">
+            <a href="#">Services<i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-content">
+              <a href="#">Raise Complaint</a>
+              <a href="#">Check Complaint Status</a>
+            </div>
+          </li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Videos</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Raise Complaint</a></li>
+        </ul>
+        <div class="icon menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <div class="banner">
+      <div class="banner-content">
+        <h1>Welcome to <br />RAG-FREE-ZONE</h1>
+        <p>Your Anti-Ragging Solution</p>
+        <p>Empowering Students, Creating Safe Spaces</p>
+        <p>Report Incidents Anonymously</p>
+        <p>Together, We Stand Against Ragging</p>
+        <a href="#about" class="button">Learn More</a>
       </div>
     </div>
-  </nav>
-  <div class="banner"></div>
-  <div class="about">
-    <div class="content">
-      <div class="title">RAG-FREE-ZONE</div>
-      <h3>Description:</h3>
-      <p>The RAG-FREE-ZONE is a comprehensive web-based solution aimed at addressing the serious issue of ragging in educational institutions. This project utilizes a combination of HTML, CSS, JavaScript, PHP, and MySQL to create a robust platform for reporting and preventing instances of ragging.</p>
-      <h3>Purpose:</h3>
-      <p>The Anti-Ragging Portal serves as a vital tool to promote a safe and harassment-free environment within educational institutions. It empowers students to report incidents without fear, and it equips administrators with the tools to take prompt action against ragging.</p>
-      <h3>Impact:</h3>
-      <p>By using technology and collaboration, this project contributes to the eradication of ragging, ensuring that educational institutions remain spaces for learning, personal growth, and mutual respect.</p>
-      <h3>Technologies Used:</h3>
-      <p>- HTML, CSS, JavaScript for the user interface <br>
-         - PHP for server-side scripting <br>
-         - MySQL for database management
-      </p>
-    <h3>Future Enhancements:</h3>
-    <p>Future enhancements could include integration with SMS or email notifications, a mobile app version, and improved data visualization for trend analysis.</p>
-    </div>
-  </div>
 
-  <script src="/js/index.js"></script>
-</body>
+    <section class="about">
+      <div class="content">
+        <div class="title">About Us</div>
+        <p>
+          RAG-FREE-ZONE is a dedicated platform designed to create a safe and
+          respectful learning environment in educational institutions. Our
+          mission is to eradicate ragging and promote a culture of mutual
+          respect among students.
+        </p>
+        <p>
+          We empower students to report incidents of ragging without fear of
+          retaliation. Our platform provides educational institutions and
+          administrators with the necessary tools to take prompt action against
+          ragging.
+        </p>
+        <p>
+          At RAG-FREE-ZONE, we believe in the power of collective action. Every
+          report, every complaint, and every voice raised against ragging is a
+          step towards a brighter, safer future. We stand united with students,
+          faculty, and administrators who share our vision of a ragging-free
+          world.
+        </p>
+        <p>
+          RAG-FREE-ZONE utilizes a combination of technologies to build a robust
+          reporting and prevention system. We are committed to ensuring that
+          educational institutions remain spaces for personal growth and
+          learning.
+        </p>
+        <p>
+          Future enhancements may include features like SMS and email
+          notifications, a mobile app version, and improved data visualization
+          for trend analysis.
+        </p>
+      </div>
+    </section>
+
+    <section id="check-complaint">
+      <div class="content">
+        <h2>Check Complaint Status</h2>
+        <form id="check-status-form">
+          <label for="complaint-id">Complaint ID:</label>
+          <input
+            type="text"
+            id="complaint-id"
+            name="complaint-id"
+            placeholder="Enter your complaint ID"
+            required
+          />
+          <button type="submit" class="button">Check Status</button>
+        </form>
+        <div id="status-result"></div>
+      </div>
+    </section>
+
+    <section id="our-team">
+      <div class="content">
+        <h2>Our Team</h2>
+        <div class="team-cards">
+          <!-- Teammate Card 1 -->
+          <div class="team-card">
+            <img src="teammate1.jpg" alt="Teammate 1" />
+            <h3>Teammate 1</h3>
+            <p>Role: Web Developer</p>
+            <div class="social-media">
+              <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+
+          <!-- Teammate Card 2 -->
+          <div class="team-card">
+            <img src="teammate2.jpg" alt="Teammate 2" />
+            <h3>Teammate 2</h3>
+            <p>Role: Designer</p>
+            <div class="social-media">
+              <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+
+          <!-- Teammate Card 3 -->
+          <div class="team-card">
+            <img src="teammate3.jpg" alt="Teammate 3" />
+            <h3>Teammate 3</h3>
+            <p>Role: Marketing</p>
+            <div class="social-media">
+              <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+
+          <!-- Teammate Card 4 -->
+          <div class="team-card">
+            <img src="teammate4.jpg" alt="Teammate 4" />
+            <h3>Teammate 4</h3>
+            <p>Role: Content Writer</p>
+            <div class="social-media">
+              <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="button login-button">Login</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="content">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your Message"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="button">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="/js/index.js"></script>
+  </body>
 </html>
