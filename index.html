@@ -1,220 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RAG-FREE-ZONE | Anti-Ragging Portal</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-</head>
-<body>
-  <nav class="navbar">
-    <div class="content">
-      <div class="logo">
-        <!-- <img src="/images/logo.png" alt=""> -->
-        <button class="button" data-text="Awesome">
-          <span class="actual-text">&nbsp;rag&nbsp;free&nbsp;zone&nbsp;</span>
-          <span aria-hidden="true" class="hover-text">&nbsp;rag&nbsp;free&nbsp;zone&nbsp;</span>
-      </button>
-      </div>
-      <ul class="menu-list">
-        <div class="icon cancel-btn">
-          <i class="fas fa-times"></i>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="content">
+        <div class="logo">
+          <button class="button" data-text="Awesome">
+            <span class="actual-text">&nbsp;rag&nbsp;free&nbsp;zone&nbsp;</span>
+            <span aria-hidden="true" class="hover-text"
+              >&nbsp;rag&nbsp;free&nbsp;zone&nbsp;</span
+            >
+          </button>
         </div>
-        <li><a href="https://www.ugc.gov.in/page/Ragging-Related-Circulars.aspx" target="_blank">Circulars</a></li>
-        <li><a href="#about">About</a></li>
-        <li class="services">
-          <a href="#">Services<i class="fas fa-chevron-down"></i></a>
-          <div class="dropdown-content">
+        <ul class="menu-list">
+          <div class="icon cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+          <li>
+            <a
+              href="https://www.ugc.gov.in/page/Ragging-Related-Circulars.aspx"
+              target="_blank"
+              >Circulars</a
+            >
+          </li>
+          <li><a href="#about">About</a></li>
+          <li class="services">
+            <a href="#">Services<i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-content">
               <a href="#">Raise Complaint</a>
               <a href="#check-complaint">Check Complaint Status</a>
-          </div>
-        </li>
-        <li><a href="#our-team">Our Team</a></li>
-        <li><a href="#">Videos</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#">Raise Complaint</a></li>
-      </ul>
-      <div class="icon menu-btn">
-        <i class="fas fa-bars"></i>
-      </div>
-    </div>
-  </nav>
-
-  <div class="banner">
-    <div class="banner-content">
-      <h1>Welcome to <br>RAG-FREE-ZONE</h1>
-      <p>Your Anti-Ragging Solution</p>
-      <p>Empowering Students, Creating Safe Spaces</p>
-      <p>Report Incidents Anonymously</p>
-      <p>Together, We Stand Against Ragging</p>
-      <a href="#about" class="button">Learn More</a>
-    </div>    
-  </div>
-
-  <section class="about" id="about">
-    <div class="content">
-      <div class="title">About Us</div>
-      <p>
-        RAG-FREE-ZONE is a dedicated platform designed to create a safe and respectful learning environment in educational institutions. Our mission is to eradicate ragging and promote a culture of mutual respect among students.
-      </p>
-      <p>
-        We empower students to report incidents of ragging without fear of retaliation. Our platform provides educational institutions and administrators with the necessary tools to take prompt action against ragging.
-      </p>
-      <p>
-        At RAG-FREE-ZONE, we believe in the power of collective action. Every report, every complaint, and every voice raised against ragging is a step towards a brighter, safer future. We stand united with students, faculty, and administrators who share our vision of a ragging-free world.
-      </p>
-      <p>
-        RAG-FREE-ZONE utilizes a combination of technologies to build a robust reporting and prevention system. We are committed to ensuring that educational institutions remain spaces for personal growth and learning.
-      </p>
-      <p>
-        Future enhancements may include features like SMS and email notifications, a mobile app version, and improved data visualization for trend analysis.
-      </p>
-    </div>
-  </section>
- 
-  <section id="check-complaint">
-    <div class="content">
-      <div class="check-complaint-content">
-        <div class="check-complaint-form">
-          <h2>Check Complaint Status</h2>
-          <form id="check-status-form">
-            <label for="complaint-id">Complaint ID:</label>
-            <input type="text" id="complaint-id" name="complaint-id" placeholder="Enter your complaint ID" required>
-            <button type="submit" class="button">Check Status</button>
-          </form>
-          <div id="status-result"></div>
-        </div>
-        <div class="check-complaint-image">
-          <img src="https://www.antiragging.in/assets/img/index/complaint-status.png" alt="Complaint Status Image">
+            </div>
+          </li>
+          <li><a href="#our-team-heading">Our Team</a></li>
+          <li><a href="video.html">Videos</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Raise Complaint</a></li>
+        </ul>
+        <div class="icon menu-btn">
+          <i class="fas fa-bars"></i>
         </div>
       </div>
-    </div>
-  </section>    
+    </nav>
 
-  <section id="our-team">
-    <h1 class="title">our team</h1>
-    <div class="team-row">
-        
-      <div class="member">
-            <img src="https://images.unsplash.com/photo-1520409364224-63400afe26e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=658&q=80" alt="">
-            <h2>ben smith</h2>
-            <h3>Role: Web Developer</h3><br>
-            <div class="social-media">
-              <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
-        <div class="member">
-            <img src="https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
-            <h2>jason</h2>
-            <h3>Role: Designer</h3><br>
-            <div class="social-media">
-              <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
-        <div class="member">
-            <img src="https://images.unsplash.com/photo-1531891570158-e71b35a485bc?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1vZGVsc3xlbnwwfHwwfHx8MA%3D%3D" alt="">
-            <h2>chris jones</h2>
-            <h3>Role: Marketing</h3><br>
-            <div class="social-media">
-              <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
-        <div class="member">
-            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW9kZWwlMjBtYW58ZW58MHx8MHx8fDA%3D&w=500" alt="">
-            <h2>max</h2>
-            <h3>Role: Content Writer</h3><br>
-            <div class="social-media">
-              <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
-    </div>
-  </section>
-  
-  <section id="contact">
-    <div class="content">
-      <h2>Contact Us</h2>
-      <form id="contact-form">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" placeholder="Your Name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="Your Email" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="button">Send Message</button>
-      </form>
-    </div>
-  </section>
-  
-  <div class="footer">
-    <div class="inner-footer">
-  
-  <!--  for company name and description -->
-      <div class="footer-items">
-        <h1>Rag Free Zone </h1>
+    <div class="banner">
+      <div class="banner-content">
+        <h1>Welcome to <br />RAG-FREE-ZONE</h1>
         <p>Your Anti-Ragging Solution</p>
+        <p>Empowering Students, Creating Safe Spaces</p>
+        <p>Report Incidents Anonymously</p>
+        <p>Together, We Stand Against Ragging</p>
+        <a href="#about" class="button">Learn More</a>
       </div>
-  
-  <!--  for quick links  -->
-      <div class="footer-items">
-        <h3>Quick Links</h3>
-        <div class="border1"></div> <!--for the underline -->
+    </div>
+
+    <section class="about" id="about">
+      <div class="content">
+        <div class="title">ABOUT US</div>
+        <p>
+          RAG-FREE-ZONE is a dedicated platform designed to create a safe and
+          respectful learning environment in educational institutions. Our
+          mission is to eradicate ragging and promote a culture of mutual
+          respect among students.
+        </p>
+        <p>
+          We empower students to report incidents of ragging without fear of
+          retaliation. Our platform provides educational institutions and
+          administrators with the necessary tools to take prompt action against
+          ragging.
+        </p>
+        <p>
+          At RAG-FREE-ZONE, we believe in the power of collective action. Every
+          report, every complaint, and every voice raised against ragging is a
+          step towards a brighter, safer future. We stand united with students,
+          faculty, and administrators who share our vision of a ragging-free
+          world.
+        </p>
+        <p>
+          RAG-FREE-ZONE utilizes a combination of technologies to build a robust
+          reporting and prevention system. We are committed to ensuring that
+          educational institutions remain spaces for personal growth and
+          learning.
+        </p>
+        <p>
+          Future enhancements may include features like SMS and email
+          notifications, a mobile app version, and improved data visualization
+          for trend analysis.
+        </p>
+      </div>
+    </section>
+
+    <section id="check-complaint">
+      <div class="content">
+        <div class="check-complaint-content">
+          <div class="check-complaint-form">
+            <h2>Check Complaint Status</h2>
+            <form id="check-status-form">
+              <label for="complaint-id">Complaint ID:</label>
+              <input
+                type="text"
+                id="complaint-id"
+                name="complaint-id"
+                placeholder="Enter your complaint ID"
+                required
+              />
+              <button type="submit" class="button">Check Status</button>
+            </form>
+            <div id="status-result"></div>
+          </div>
+          <div class="check-complaint-image">
+            <img
+              src="https://www.antiragging.in/assets/img/index/complaint-status.png"
+              alt="Complaint Status Image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="our-team">
+      <h1 class="title" id="our-team-heading">our team</h1>
+      <div class="team-row">
+        <div class="member">
+          <img
+            src="https://images.unsplash.com/photo-1520409364224-63400afe26e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=658&q=80"
+            alt=""
+          />
+          <h2>ben smith</h2>
+          <h3>Role: Web Developer</h3>
+          <br />
+          <div class="social-media">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="member">
+          <img
+            src="https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+            alt=""
+          />
+          <h2>jason</h2>
+          <h3>Role: Designer</h3>
+          <br />
+          <div class="social-media">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="member">
+          <img
+            src="https://images.unsplash.com/photo-1531891570158-e71b35a485bc?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1vZGVsc3xlbnwwfHwwfHx8MA%3D%3D"
+            alt=""
+          />
+          <h2>chris jones</h2>
+          <h3>Role: Marketing</h3>
+          <br />
+          <div class="social-media">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="member">
+          <img
+            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW9kZWwlMjBtYW58ZW58MHx8MHx8fDA%3D&w=500"
+            alt=""
+          />
+          <h2>max</h2>
+          <h3>Role: Content Writer</h3>
+          <br />
+          <div class="social-media">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="content">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject:</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Your Subject"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your Message"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <button type="button" class="button" id="submit-button">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div class="inner-footer">
+        <div class="footer-items">
+          <h1>Rag Free Zone</h1>
+          <p>Your Anti-Ragging Solution</p>
+        </div>
+
+        <div class="footer-items">
+          <h3>Quick Links</h3>
+          <div class="border1"></div>
           <ul>
-            <a href="#"><li>Home</li></a>
-            <a href="#"><li>Our Team</li></a>
-            <a href="#"><li>Contact</li></a>
-            <a href="#"><li>About</li></a>
+            <a href="index.html"><li>Home</li></a>
+            <a href="index.html#our-team"><li>Our Team</li></a>
+            <a href="index.html#contact"><li>Contact</li></a>
+            <a href="index.html#about"><li>About</li></a>
             <a href="#"><li>Admin Login</li></a>
           </ul>
-      </div>
-  
-  <!--  for some other links -->
-      <div class="footer-items">
-        <h3>Sitemap</h3>
-        <div class="border1"></div>  <!--for the underline -->
+        </div>
+
+        <div class="footer-items">
+          <h3>Sitemap</h3>
+          <div class="border1"></div>
           <ul>
-            <a href="#"><li>Ragging Related Circulars</li></a>
+            <a href="https://www.ugc.gov.in/page/Ragging-Related-Circulars.aspx"
+              ><li>Ragging Related Circulars</li></a
+            >
             <a href="#"><li>Register Complaint</li></a>
             <a href="feedback.html"><li>Give Your Feedback</li></a>
             <a href="FAQ.html"><li>Frequently Asked Questions</li></a>
-            <a href="#"><li>Videos On Ragging</li></a>
+            <a href="video.html"><li>Videos On Ragging</li></a>
           </ul>
-      </div>
-  
-  <!--  for contact us info -->
-      <div class="footer-items">
-        <h3>Contact us</h3>
-        <div class="border1"></div>
+        </div>
+
+        <div class="footer-items">
+          <h3>Contact us</h3>
+          <div class="border1"></div>
           <ul>
             <li><i class="fa fa-map-marker" aria-hidden="true"></i>XYZ, abc</li>
             <li><i class="fa fa-phone" aria-hidden="true"></i>1800-111-1111</li>
-            <li><i class="fa fa-envelope" aria-hidden="true"></i>helpline@ragfreezone.in</li>
-          </ul> 
-        
+            <li>
+              <i class="fa fa-envelope" aria-hidden="true"></i
+              >helpline@ragfreezone.in
+            </li>
+          </ul>
         </div>
       </div>
-    
-  <!--   Footer Bottom start  -->
-    <div class="footer-bottom">
-      Copyright &copy; Rag Free Zone 2023.
-    </div>
-  </div>
 
-  <script id="pixel-chaty" async="true" src="https://cdn.chaty.app/pixel.js?id=SEKzOMPE"></script>
-  <script src="/js/index.js"></script>
-</body>
+      <div class="footer-bottom">Copyright &copy; Rag Free Zone 2023.</div>
+    </div>
+
+    <script
+      id="pixel-chaty"
+      async="true"
+      src="https://cdn.chaty.app/pixel.js?id=SEKzOMPE"
+    ></script>
+    <script src="/js/index.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </body>
 </html>

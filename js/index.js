@@ -16,90 +16,65 @@ window.onscroll = ()=>{
     this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
 }
 
-document.getElementById("toggleButtons").addEventListener("click", function () {
-    // Toggle the visibility of WhatsApp Chat and Call buttons
-    const chatButton = document.querySelector(".click-to-whatsapp-chat-button");
-    const callButton = document.querySelector(".click-to-call-button");
-  
-    chatButton.style.display = chatButton.style.display === "none" ? "block" : "none";
-    callButton.style.display = callButton.style.display === "none" ? "block" : "none";
-  });
-  
+// Function to send the message
+function Send() {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var subject = document.getElementById('subject').value;
+    var message = document.getElementById('message').value;
 
-//   #our-team {
-//     padding: 60px 0;
-//     background-color: #fff;
-//     text-align: center;
-//   }
-  
-//   #our-team h2 {
-//     font-size: 32px;
-//     font-weight: 700;
-//     margin-bottom: 20px;
-//     color: #111;
-//   }
-  
-//   .team-cards {
-//     display: flex;
-//     justify-content: center; /* Center-align the team cards */
-//     flex-wrap: wrap;
-//   }
-  
-//   .team-card {
-//     flex: 0 1 calc(25% - 20px);
-//     text-align: center;
-//     background-color: #fff;
-//     padding: 20px;
-//     margin: 10px;
-//     border-radius: 5px;
-//     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
-//     overflow: hidden;
-//   }
-  
-//   .team-card img {
-//     max-width: 100%;
-//     border-radius: 50%;
-//     object-fit: cover;
-//     transition: all ease 1s;
-  
-//   }
-  
-//   .team-card:hover img{
-//     scale: 1.2;
-//   }
-  
-//   .team-card h3 {
-//     font-size: 20px;
-//     font-weight: 700;
-//     margin-top: 10px;
-//     color: #111;
-//   }
-  
-//   .team-card p {
-//     font-size: 16px;
-//     margin: 10px 0;
-//     color: #555;
-//   }
-  
-//   .social-media a {
-//     font-size: 20px;
-//     margin: 0 10px;
-//     color: #111;
-//   }
-  
-//   .button.login-button {
-//     background: #ffd000;
-//     color: #111;
-//     border: 2px solid #ffd000;
-//     border-radius: 15px;
-//     padding: 10px 20px;
-//     font-size: 18px;
-//     text-decoration: none;
-//     margin-top: 20px;
-//     display: inline-block;
-//   }
-  
-//   .button.login-button:hover {
-//     background: #111;
-//     color: #ffd000;
-//   }
+    // Validation for name: Should not be empty
+    if (name.trim() === '') {
+      swal("Invalid Name", "Please enter your name.", "error");
+      return;
+    }
+
+    // Validation for email: Should be a valid email address
+    if (!validateEmail(email)) {
+      swal("Invalid Email", "Please enter a valid email address.", "error");
+      return;
+    }
+
+    // Validation for subject: Should not be empty
+    if (subject.trim() === '') {
+      swal("Invalid Subject", "Please enter a subject.", "error");
+      return;
+    }
+
+    // Validation for message: Should not be empty
+    if (message.trim() === '') {
+      swal("Invalid Message", "Please enter your message.", "error");
+      return;
+    }
+
+    var body = "Name: " + name + "<br/> Email: " + email + "<br/> Message: " + message;
+
+    Email.send({
+      SecureToken: "a61f9ed3-4369-4038-abcd-c975d0c32371",
+      To: 'briti7751@gmail.com',
+      From: 'briti7751@gmail.com',
+      Subject: subject,
+      Body: body
+    }).then(function (message) {
+      if (message === "OK") {
+        swal("Message Sent!", "Your Data Received Successfully.", "success");
+        // Clear the form fields after successful submission
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('subject').value = '';
+        document.getElementById('message').value = '';
+      } else {
+        swal("Something Went Wrong!", "Your Data is Not Received.", "error");
+      }
+    });
+  }
+
+  // Email validation function
+  function validateEmail(email) {
+    // Regular expression to check if the email is in a valid format
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+  }
+
+  // Add an event listener to the submit button
+  document.getElementById('submit-button').addEventListener('click', Send);
