@@ -51,6 +51,15 @@
       </div>
     </nav>
 
+    <div class="preloader">
+      <div class="preloader-text">Rag Free Zone</div>
+      <div class="loading-squares">
+        <div class="loading-square"></div>
+        <div class="loading-square"></div>
+        <div class="loading-square"></div>
+      </div>
+    </div>
+
     <div class="banner">
       <div class="banner-content">
         <h1>Welcome to <br />RAG-FREE-ZONE</h1>
@@ -297,5 +306,13 @@
     <script src="/js/index.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+      // preloader.js
+      document.addEventListener("DOMContentLoaded", function () {
+        // Hide the preloader when the DOM content is fully loaded
+        var preloader = document.querySelector(".preloader");
+        preloader.style.display = "none";
+      });
+    </script>
   </body>
 </html>
