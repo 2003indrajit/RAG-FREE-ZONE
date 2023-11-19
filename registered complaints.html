@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <!--Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+     <!--CUSTOM CSS-->
+    <link rel="stylesheet" href="css/style_dash.css">
+
+    <!--CSS-->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="content">
+            <!--Header-->
+            <div class="logo">
+                <!-- <img src="/images/logo.png" alt=""> -->
+                <button class="button" data-text="Awesome">
+                    <span class="actual-text">&nbsp;rag&nbsp;free&nbsp;zone&nbsp;</span>
+                    <span aria-hidden="true" class="hover-text"
+                    >&nbsp;rag&nbsp;free&nbsp;zone&nbsp;</span>
+                </button>
+            </div>
+            <ul class="menu-list">
+                <li>
+                    <a href="admin index.html">
+                        <span class="material-icons-outlined">home</span> Home
+                    </a>
+                </li>
+                <li>
+                    <a href="admin dashboard.html">
+                        <span class="material-icons-outlined">dashboard</span> Dashboard
+                    </a>
+                </li>
+                
+                <li class="services">
+                    <a href="#">
+                        <span class="material-icons-outlined">admin_panel_settings</span> Complaints
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="registered complaints.html">
+                          <font style="color: #ffd000;"><span class="material-icons-outlined">back_hand</span> Registered Complaints</font>
+                        </a>
+                        <a href="authorities informed.html">
+                            <span class="material-icons-outlined">assignment_turned_in</span> Authorities Informed
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="inform authorities.html">
+                      <span class="material-icons-outlined">contact_emergency</span> Inform Authorities
+                    </a>
+                </li>
+                <li>
+                    <a href="admin reports.html">
+                      <span class="material-icons-outlined">assessment</span> Reports
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                      <span class="material-icons-outlined">logout</span> Logout
+                    </a>
+                </li>
+            </ul>
+            <div class="icon menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+        <!--End Header-->
+    
+        <!-- <div class="banner">
+        <div class="banner-content">
+            <h1>Welcome to <br />RAG-FREE-ZONE</h1>
+            <p>Together, We Stand Against Ragging</p>
+            <a href="#about" class="button">Learn More</a>
+        </div>
+        </div> -->
+    
+        <!--Main-->
+
+        <section id="check-complaint">
+            <div class="content">
+              <div class="check-complaint-content">
+                <div class="check-complaint-form">
+                  <h2>Check Complaint Status</h2>
+                  <form id="check-status-form">
+                    <label for="complaint-id">Complaint ID:</label>
+                    <input
+                      type="text"
+                      id="complaint-id"
+                      name="complaint-id"
+                      placeholder="Enter your complaint ID"
+                      required
+                    />
+                    <button type="submit" class="button">Check Status</button>
+                  </form>
+                  <div id="status-result"></div>
+                </div>
+                <div class="check-complaint-image">
+                  <img
+                    src="https://www.antiragging.in/assets/img/index/complaint-status.png"
+                    alt="Complaint Status Image"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+        <!--End Main-->  
+
+        <!--Footer-->
+        <div class="footer">
+            <div class="inner-footer">
+              <div class="footer-items">
+                <h1>Rag Free Zone</h1>
+                <p>Your Anti-Ragging Solution</p>
+              </div>
+      
+              <div class="footer-items">
+                <h3>Quick Links</h3>
+                <div class="border1"></div>
+                <ul>
+                  <a href="index.html"><li>Home</li></a>
+                  <a href="index.html#our-team"><li>Our Team</li></a>
+                  <a href="index.html#contact"><li>Contact</li></a>
+                  <a href="index.html#about"><li>About</li></a>
+                  <a href="#"><li>Admin Login</li></a>
+                </ul>
+              </div>
+      
+              <div class="footer-items">
+                <h3>Sitemap</h3>
+                <div class="border1"></div>
+                <ul>
+                  <a href="https://www.ugc.gov.in/page/Ragging-Related-Circulars.aspx"
+                    ><li>Ragging Related Circulars</li></a
+                  >
+                  <a href="#"><li>Register Complaint</li></a>
+                  <a href="feedback.html"><li>Give Your Feedback</li></a>
+                  <a href="FAQ.html"><li>Frequently Asked Questions</li></a>
+                  <a href="video.html"><li>Videos On Ragging</li></a>
+                </ul>
+              </div>
+      
+              <div class="footer-items">
+                <h3>Contact us</h3>
+                <div class="border1"></div>
+                <ul>
+                  <li><i class="fa fa-map-marker" aria-hidden="true"></i>XYZ, abc</li>
+                  <li><i class="fa fa-phone" aria-hidden="true"></i>1800-111-1111</li>
+                  <li>
+                    <i class="fa fa-envelope" aria-hidden="true"></i
+                    >helpline@ragfreezone.in
+                  </li>
+                </ul>
+              </div>
+            </div>
+      
+            <div class="footer-bottom">Copyright &copy; Rag Free Zone 2023.</div>
+        </div>        
+                
+            
+        <!--End Footer-->
+
+        <!--ApexCharts-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.41.0/apexcharts.min.js"></script>
+        
+        <!--CHARTS.JS-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.3/dist/chart.umd.min.js"></script>
+
+        <!--CUSTOM JS-->    
+        <script src="js/charts.js"></script>
+        <script src="js/index.js"></script>
+
+    </body>
+</html>
